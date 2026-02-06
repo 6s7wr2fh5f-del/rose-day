@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Rose Day 🌹</title>
+<style>
+body{margin:0;font-family:sans-serif;text-align:center;
+background:linear-gradient(#ff9a9e,#fad0c4);}
+h2{color:#b30047}
+.r{display:grid;grid-template-columns:repeat(3,1fr);
+gap:15px;max-width:300px;margin:20px auto}
+.r span{font-size:45px;cursor:pointer}
+.p{display:none;position:fixed;inset:0;
+background:#0008;align-items:center;justify-content:center}
+.c{background:#fff0f5;padding:20px;border-radius:15px;
+max-width:260px;color:#800033}
+button{margin-top:10px;border:0;padding:6px 12px;
+border-radius:20px;background:#ff4d6d;color:#fff}
+</style>
+</head>
+<body>
+
+<h2>Choose a Rose 🌹</h2>
+<p>Har rose ke saath ek ehsaas 💖</p>
+
+<div class="r">
+<span onclick="o()">🌹</span><span onclick="o()">🌹</span><span onclick="o()">🌹</span>
+<span onclick="o()">🌹</span><span onclick="o()">🌹</span><span onclick="o()">🌹</span>
+<span onclick="o()">🌹</span><span onclick="o()">🌹</span><span onclick="o()">🌹</span>
+</div>
+
+<div class="p" id="p"><div class="c" id="t"></div></div>
+
+<script>
+let l=[
+"Tumhari muskaan mere din ko roshan kar deti hai.",
+"Ye rose tumhare liye… kyunki tum khaas ho.",
+"Tumse baat na ho toh kuch adhoora lagta hai.",
+"Tumhara khayal aate hi chehra muskura deta hai.",
+"Agar pyaar ek feeling hai, toh tum uska reason ho."
+];
+function o(){
+t.innerHTML=l[Math.random()*l.length|0]+
+"<br><button onclick='p.style.display=\"none\"'>Close</button>";
+p.style.display="flex";
+}
+</script>
+
+</body>
+</html>
